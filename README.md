@@ -4,15 +4,16 @@
 
 
 
-#使用方法
+# 使用方法
 narakenkoukoukian.styをnarakenkoukoukian.texの方で
 
 \usepackage{narakenkoukoukian}を使って読み込む
 
 
 そして、narakenkoukoukian.texのdocument環境の中で
+```
 \kiankagami{daimei}{ukagai}{shimei}{\和暦\today}{gakkoumei}
-
+```
 を使用して、作成する。
 
 
@@ -36,7 +37,7 @@ pdfを見ると、どこに何が入るかは大体わかると思います。
 
 
 
-#注意点
+# 注意点
 伺いの項目の後に適当に空白行を入れているので、引数{ukagai}のところが長文になった場合はstyファイルの方の調整が必要です。
 
 自動で空白を調整するためにtabularhtパッケージを利用しようとしてみましたが、うまくいかずに、自動で空行を入れた部分の縦線が入らなかったため使用していません。
