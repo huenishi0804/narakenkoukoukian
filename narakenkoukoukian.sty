@@ -1,0 +1,50 @@
+%パッケージの読み込み
+\usepackage{array}
+\usepackage[top=18truemm,left=20truemm,right=20truemm]{geometry}
+%\usepackage[vlines]{tabularht}%これでinterrowfillの部分に縦線が入るはずが入らない。
+
+\pagestyle{empty}%ページ番号いらない
+\renewcommand*{\arraystretch}{1.7} %行送りを1.7倍にする。行間を開けるため
+
+%表部分スタート
+\newcommand{\kiankagami}[5]{%
+\begin{table}[htbp]
+	\centering
+%	\begin{tabularht}{25cm}{@{\vrule width1pt \ }>{\centering}m{2.2cm}|m{4cm}|>{\centering}m{2cm}|c|c|m{1cm}|c|c@{\ \vrule width1pt}}
+	\begin{tabular}{@{\vrule width1pt \ }>{\centering}m{2.2cm}|m{4cm}|>{\centering}m{2cm}|c|c|m{1cm}|c|c@{\ \vrule width1pt}}
+		\cline{4-8}
+		\multicolumn{3}{c|}{}&\multicolumn{2}{c}{ 索引\par 番号} & \multicolumn{3}{|c|}{}\\
+\noalign{\hrule height 1pt}%太い線を引く方法
+\multicolumn{1}{@{\vrule width1pt \ }c}{（題　名）}&\multicolumn{7}{p{13cm}@{\ \vrule width1pt}}{#1}\\
+\hline
+\multicolumn{1}{@{\vrule width1pt \ }c}{（伺　い）}&\multicolumn{7}{p{13cm}@{\ \vrule width1pt}}{#2}\\
+%\interrowfill
+\multicolumn{8}{@{\vrule width1pt}c@{\ \vrule width1pt}}{}\\
+\multicolumn{8}{@{\vrule width1pt}c@{\ \vrule width1pt}}{}\\
+\multicolumn{8}{@{\vrule width1pt}c@{\ \vrule width1pt}}{}\\
+\multicolumn{8}{@{\vrule width1pt}c@{\ \vrule width1pt}}{}\\
+\multicolumn{8}{@{\vrule width1pt}c@{\ \vrule width1pt}}{}\\
+\hline
+\multicolumn{8}{@{\vrule width1pt}c@{\ \vrule width1pt}}{}\\
+\multicolumn{8}{@{\vrule width1pt}l@{\ \vrule width1pt}}{\hspace{1cm}校　　長\hspace{3cm}教　　頭\hspace{3cm}事 務 長\hspace{1cm}}\\
+\multicolumn{8}{@{\vrule width1pt}c@{\ \vrule width1pt}}{}\\
+\multicolumn{8}{@{\vrule width1pt}c@{\ \vrule width1pt}}{}\\
+\multicolumn{8}{@{\vrule width1pt}l@{\ \vrule width1pt}}{\hspace{1cm}　　　　\hspace{3cm}係　　長\hspace{3cm}関係職員\hspace{1cm}}\\
+\multicolumn{8}{@{\vrule width1pt}c@{\ \vrule width1pt}}{}\\
+\multicolumn{8}{@{\vrule width1pt}c@{\ \vrule width1pt}}{}\\
+\hline
+文章処理上\par の　記　事&秘　公印省略\par その他（　　　　）\par {\tiny [ファクシミリ施行又は電子メール施行]} &起 案 者\par 職氏名印&\multicolumn{5}{c@{\ \vrule width1pt}}{教諭　　#3　印}\\
+\hline
+起　　　案&#4 &分　　類&{\tiny 第1分類}&{\tiny 第2分類}&{\tiny 第3分類}&{\tiny 第4分類}&{\tiny 細分類}\\
+\cline{1-2}\cline{4-8}
+決　　　済&令和　年 　月 　日&記　　号& & & & &\\
+\hline
+施　　　行&令和　年 　月 　日&保存期間&\multicolumn{5}{c@{\ \vrule width1pt}}{1年 3年 5年 10年 20年 永年}\\
+
+\noalign{\hrule height 1pt}%太い線を引く方法
+\multicolumn{8}{c}{奈 良 県 立 #5  高 等 学 校}\\
+
+%\end{tabularht}
+\end{tabular}
+\end{table}
+}
